@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🌱 Plant Disease Recognition System</h1>
+        <div class="navigation">
+            <a href="#" class="nav-link active" data-page="home">Home</a>
+            <a href="#" class="nav-link" data-page="about">About</a>
+            <a href="#" class="nav-link" data-page="recognition">Disease Recognition</a>
+        </div>
+
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <h2>🌿 Welcome to Plant Disease Recognition System</h2>
+            <img src="{{ url_for('static', filename='farmer.jpg') }}" alt="Background Image" class="background-image">
+            <p>
+                Welcome to the <strong>Plant Disease Recognition System</strong>! 🌾🛠️  
+                This system helps farmers identify plant diseases instantly.  
+                Just <strong>upload a plant image</strong>, and our AI model will <strong>detect diseases</strong> accurately! ✅  
+            </p>
+        </div>
+
+        <!-- About Page -->
+        <div id="about" class="page">
+            <h2>📌 About the Project</h2>
+            <p>
+                This dataset consists of 87K+ images of <strong>healthy and diseased crops</strong>, categorized into <strong>38 different classes</strong>.
+            </p>
+            <ul>
+                <li><strong>Total Images:</strong> 87,000+</li>
+                <li><strong>Training Set:</strong> 70,295 images</li>
+                <li><strong>Validation Set:</strong> 17,572 images</li>
+                <li><strong>Test Set:</strong> 33 images</li>
+            </ul>
+        </div>
+
+        <!-- Disease Recognition Page -->
+<div id="recognition" class="page">
+    <h2>🧐 Disease Recognition System</h2>
+    <form id="upload-form">
+        <input type="file" id="file-input" name="file" accept="image/*" required>
+        <button type="submit">🔍 Predict</button>
+    </form>
+    <div id="result">
+        <img id="uploaded-image" src="" alt="Uploaded Image" class="uploaded-image">
+        <p id="disease-result"></p>
+        <p id="confidence-result"></p>
+
+        <!-- Add the recommendation button and section here -->
+        <button id="recommendation-button" style="display: none;">Get Recommendations</button>
+        <div id="recommendation-section" style="display: none;">
+            <h3>Recommendations</h3>
+            <p id="recommendation-text"></p>
+        </div>
+    </div>
+</div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
