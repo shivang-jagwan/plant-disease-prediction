@@ -79,7 +79,7 @@ def model_prediction(test_image):
 if selected_page == "Home":
     st.header("🌿 Welcome to Plant Disease Recognition System")
     image_path = "47ec2dbb0cf87c01830f03e5445956eed6fa2d02.jpg"  # Replace with your image
-    st.image(image_path, use_container_width=True)
+    st.image(image_path, width=600)
     
     st.markdown("""
     Welcome to the **Plant Disease Recognition System**! 🌾🛠️  
@@ -109,7 +109,7 @@ elif selected_page == "Disease Recognition":
 
     # Display Image
     if test_image:
-        st.image(test_image, width=300, use_column_width=False, caption="Uploaded Image", output_format="auto")
+        st.image(test_image, width=300, caption="Uploaded Image")
 
     # Prediction Button
     if st.button("🔍 Predict"):
