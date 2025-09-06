@@ -2,6 +2,15 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import tensorflow as tf
+import os
+
+# Set page config first
+st.set_page_config(
+    page_title="Plant Disease Detection",
+    page_icon="🌱",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
 
 # Custom CSS for background and styling
 st.markdown(
