@@ -3,7 +3,9 @@
 A machine learning-powered web application for detecting plant diseases from images using deep learning.
 
 ## 🚀 Live Demo
-[Deployed on Render](https://plant-disease-prediction.onrender.com)
+**[🌐 Try the Live App](https://plant-disease-prediction-1-26m6.onrender.com)**
+
+Deployed on Render - Click the link above to use the plant disease detection system!
 
 ## ✨ Features
 
